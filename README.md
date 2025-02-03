@@ -1,6 +1,6 @@
 # AirportsOfTheWorld
 
-La aplicación muestra un listado de aeropuertos internacionales.
+The application shows a list of international airports.
 
 ## Stubby configuration
 
@@ -16,11 +16,11 @@ The responses from the server are already configured.
 
 ### Configurations
 
-- Updating this project to Angular 13 will be evaluated.
+- Updating this project to last Angular version will be evaluated.
 - Create a script in the package.json that when executed will raise both the stubs and the serve.
 
 ### Applicatión
-
+- Refactor the application
 - Refactor the `airports-list-component` component so that all elements are reusable
 - Create a screen with the airport detail
 - Control navigation between screens
@@ -44,4 +44,6 @@ The responses from the server are already configured.
 *It will be valued that the application is accessible <br>
 *Any additional point to those required will be valued very positively
 
+**Crea un README2.md comentado las tareas realizadas**
+<br><br>
  **Por favor, una vez finalizada la prueba simplemente debemos crear una petición de incorporación (Pull Request) hacía la rama de master del repositorio, y el último commit contenga en al descripción "Finished". Con esto podemos saber que la prueba ha sido finalizada.**
