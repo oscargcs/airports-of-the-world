@@ -2,28 +2,36 @@
 
 
 <mat-toolbar>
-    <span>Vueling</span>
+  <span>Vueling</span>
 </mat-toolbar>
-<div class="aiports-list" *ngIf="airportsList">
+@if (airportsList) {
+  <div class="aiports-list">
     <h1>Airports List:</h1>
     <div class="airports-list-containers" >
-        <mat-card class="example-card" *ngFor="let airport of airportsList" (click)="clickAirport(airport.key)">
-            <mat-card-header>
-                <mat-card-title>{{airport.name}}</mat-card-title>
-                <mat-card-subtitle>{{airport.key}}</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-                <p><strong>City:</strong> {{airport.city}}</p>
-                <p><strong>Country:</strong> {{airport.country}}</p>
-            </mat-card-content>
+      @for (airport of airportsList; track airport) {
+        <mat-card class="example-card" (click)="clickAirport(airport.key)">
+          <mat-card-header>
+            <mat-card-title>{{airport.name}}</mat-card-title>
+            <mat-card-subtitle>{{airport.key}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p><strong>City:</strong> {{airport.city}}</p>
+            <p><strong>Country:</strong> {{airport.country}}</p>
+          </mat-card-content>
         </mat-card>
+      }
     </div>
-</div>
-<div *ngIf="!airportsList && !error">
+  </div>
+}
+@if (!airportsList && !error) {
+  <div>
     <mat-spinner></mat-spinner>
-</div>
-<div *ngIf="error">
+  </div>
+}
+@if (error) {
+  <div>
     {{ error }}
-</div>
+  </div>
+}
 
 
