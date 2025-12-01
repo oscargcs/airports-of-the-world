@@ -1,13 +1,24 @@
 import {Component, OnInit} from '@angular/core';
 import {AirportsListService} from './airports-list.service';
 import {Airport} from './airport';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatCardModule } from "@angular/material/card";
+import { CommonModule } from "@angular/common";
 
 @Component({
     selector: 'app-airports-list',
     templateUrl: './airports-list.component.html',
+    standalone: true,
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatProgressSpinnerModule
+    ],
     styleUrls: ['./airports-list.component.scss']
 })
-export class AirportsListComponent implements OnInit{
+export default class AirportsListComponent implements OnInit{
     public airportsList?: Airport[];
     public error?: string;
     constructor(private airportsListService: AirportsListService) {

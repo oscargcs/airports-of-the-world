@@ -10,7 +10,9 @@ export class AirportsListService {
 
     public getAllAirports(): Promise<Airport[] | undefined> {
         const url = 'http://localhost:1500/allAirports';
-        return this.http.get<Airport[]>(url).toPromise();
+        return this.http.get<Airport[]>(url, {
+            headers: { securityKey: 'key' } //todo: add to all requests in an interceptor
+        } ).toPromise();
     }
 
     public getAirport(airportKey: string): Promise<Airport | undefined> {
