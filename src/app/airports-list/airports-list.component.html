@@ -1,24 +1,10 @@
-
-
-
-<mat-toolbar>
-  <span>Vueling</span>
-</mat-toolbar>
+<app-navbar-component></app-navbar-component>
 @if (airportsList) {
-  <div class="aiports-list">
+  <div class="airports-list">
     <h1>Airports List:</h1>
     <div class="airports-list-containers" >
       @for (airport of airportsList; track airport) {
-        <mat-card class="example-card" (click)="clickAirport(airport.key)">
-          <mat-card-header>
-            <mat-card-title>{{airport.name}}</mat-card-title>
-            <mat-card-subtitle>{{airport.key}}</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <p><strong>City:</strong> {{airport.city}}</p>
-            <p><strong>Country:</strong> {{airport.country}}</p>
-          </mat-card-content>
-        </mat-card>
+        <app-airport-card [airport]="airport"></app-airport-card>
       }
     </div>
   </div>

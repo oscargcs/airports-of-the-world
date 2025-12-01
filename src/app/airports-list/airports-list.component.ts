@@ -2,16 +2,16 @@ import {Component, OnInit} from '@angular/core';
 import {AirportsListService} from './airports-list.service';
 import {Airport} from './airport';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatCardModule} from "@angular/material/card";
+import {NavbarComponent} from "../shared/components/navbar-component/navbar.component";
+import {AirportCardComponent} from "../shared/components/airport-card/airport-card.component";
 
 @Component({
     selector: 'app-airports-list',
     templateUrl: './airports-list.component.html',
     standalone: true,
     imports: [
-        MatCardModule,
-        MatToolbarModule,
+        NavbarComponent,
+        AirportCardComponent,
         MatProgressSpinnerModule
     ],
     styleUrls: ['./airports-list.component.scss']
@@ -30,10 +30,4 @@ export default class AirportsListComponent implements OnInit {
             this.error = error.message;
         });
     }
-
-    public async clickAirport(key: string): Promise<void> {
-        const airport = await this.airportsListService.getAirport(key);
-        console.log(airport);
-    }
-
 }
