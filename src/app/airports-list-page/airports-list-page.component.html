@@ -1,12 +1,12 @@
 <app-navbar-component></app-navbar-component>
-@if (airportsList) {
-    <app-airports-list [airports]="airportsList"></app-airports-list>
+@if (airportsList()) {
+    <app-airports-list [airports]="airportsList()!"></app-airports-list>
 }
-@if (!airportsList && !error) {
+@if (!airportsList() && !error()) {
     <app-loading></app-loading>
 }
-@if (error) {
-    <app-error [error]="error"></app-error>
+@if (error()) {
+    <app-error [error]="error()!"></app-error>
 }
 
 

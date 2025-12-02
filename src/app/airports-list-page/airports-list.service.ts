@@ -1,23 +1,23 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Airport} from './airport';
+import {Observable} from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class AirportsListService {
 
-    constructor(private http: HttpClient) {
-    }
+    private http: HttpClient = inject(HttpClient);
 
-    public getAllAirports(): Promise<Airport[] | undefined> {
+    public getAllAirports(): Observable<Airport[] | undefined> {
         const url = 'http://localhost:1500/allAirports';
         return this.http.get<Airport[]>(url, {
-            headers: { securityKey: 'key' } //todo: add to all requests in an interceptor
-        } ).toPromise();
+            headers: {securityKey: 'key'} //todo: add to all requests in an interceptor
+        });
     }
 
-    public getAirport(airportKey: string): Promise<Airport | undefined> {
+    public getAirport(airportKey: string): Observable<Airport | undefined> {
         const url = 'http://localhost:1500/airport';
-        return this.http.post<Airport>(url, {key: airportKey}).toPromise();
+        return this.http.post<Airport>(url, {key: airportKey});
     }
 
 }

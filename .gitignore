@@ -7,3 +7,7 @@
 # Angular
 /node_modules/
 
+#Editor
+.idea
+
+
