@@ -8,7 +8,7 @@ export const routes: Routes = [
     },
     {
         path: 'airportsList',
-        loadComponent: () => import('./airports-list/airports-list.component')
+        loadComponent: () => import('./airports-list-page/airports-list-page.component')
     }
 ];
 

@@ -4,19 +4,20 @@ import {Airport} from './airport';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {NavbarComponent} from "../shared/components/navbar-component/navbar.component";
 import {AirportCardComponent} from "../shared/components/airport-card/airport-card.component";
+import { AirportsListComponent } from "../shared/components/airports-list/airports-list.component";
 
 @Component({
-    selector: 'app-airports-list',
-    templateUrl: './airports-list.component.html',
+    selector: 'app-airports-list-page',
+    templateUrl: './airports-list-page.component.html',
     standalone: true,
     imports: [
         NavbarComponent,
-        AirportCardComponent,
+        AirportsListComponent,
         MatProgressSpinnerModule
     ],
-    styleUrls: ['./airports-list.component.scss']
+    styleUrls: ['./airports-list-page.component.scss']
 })
-export default class AirportsListComponent implements OnInit {
+export default class AirportsListPageComponent implements OnInit {
     public airportsList?: Airport[];
     public error?: string;
 

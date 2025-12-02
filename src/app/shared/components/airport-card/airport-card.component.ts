@@ -1,7 +1,7 @@
 import { Component, inject, input, InputSignal } from '@angular/core';
 import { MatCardModule } from "@angular/material/card";
-import { Airport } from "src/app/airports-list/airport";
-import { AirportsListService } from "src/app/airports-list/airports-list.service";
+import { Airport } from "src/app/airports-list-page/airport";
+import { AirportsListService } from "src/app/airports-list-page/airports-list.service";
 
 @Component({
   selector: 'app-airport-card',

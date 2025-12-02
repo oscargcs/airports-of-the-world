@@ -1,0 +1,8 @@
+<div class="airports-list">
+    <h1>Airports List:</h1>
+    <div class="airports-list-containers" >
+        @for (airport of airports(); track airport) {
+            <app-airport-card [airport]="airport"></app-airport-card>
+        }
+    </div>
+</div>
