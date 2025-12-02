@@ -5,6 +5,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {NavbarComponent} from "../shared/components/navbar-component/navbar.component";
 import {AirportCardComponent} from "../shared/components/airport-card/airport-card.component";
 import { AirportsListComponent } from "../shared/components/airports-list/airports-list.component";
+import { ErrorComponent } from "../shared/components/error/error.component";
+import { LoadingComponent } from "../shared/components/loading/loading.component";
 
 @Component({
     selector: 'app-airports-list-page',
@@ -13,7 +15,8 @@ import { AirportsListComponent } from "../shared/components/airports-list/airpor
     imports: [
         NavbarComponent,
         AirportsListComponent,
-        MatProgressSpinnerModule
+        ErrorComponent,
+        LoadingComponent
     ],
     styleUrls: ['./airports-list-page.component.scss']
 })

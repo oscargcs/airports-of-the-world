@@ -3,14 +3,10 @@
     <app-airports-list [airports]="airportsList"></app-airports-list>
 }
 @if (!airportsList && !error) {
-  <div>
-    <mat-spinner></mat-spinner>
-  </div>
+    <app-loading></app-loading>
 }
 @if (error) {
-  <div>
-    {{ error }}
-  </div>
+    <app-error [error]="error"></app-error>
 }
 
 
