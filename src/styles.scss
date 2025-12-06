@@ -1,18 +1,30 @@
+@use 'src/styles/base/index' as *;
 
-$color-primary-a:                     #FFCC00;
-$color-primary-b: #eae0c3;
+html, body {
+  height: 100%;
+  background: var(--gray-10);
+  margin: 0;
+  font-family: var(--font-primary);
+}
 
-$color-white:                         #FFF;
-$gray-10:                             #F7F7F7;
-$gray-15:                             #F3F3F3;
-$gray-18:                             #E9E9E9;
-$gray-20:                             #DDD; //color-primary-b--light
-$gray-30:                             #CCC;
-$gray-45:                             #999;
-$gray-60:                             #4D4D4D; //color-primary-b
-$gray-75:                             #333; // color-primary-b--dark
-$color-black:                         #000;
+h1 {
+  font-size: var(--font-xl);
+}
 
+h2 {
+  font-size: var(--font-lg); //todo: mira si has de posar font-weight
+}
 
-html, body { height: 100%; background: $gray-10}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h3 {
+  font-size: var(--font-md);
+}
+
+p {
+  font-size: var(--font-xs);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+}

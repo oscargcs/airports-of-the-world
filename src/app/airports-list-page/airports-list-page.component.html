@@ -3,7 +3,9 @@
     <app-airports-list [airports]="airportsList()!"></app-airports-list>
 }
 @if (!airportsList() && !error()) {
-    <app-loading></app-loading>
+    <div class="loading">
+        <app-loading></app-loading>
+    </div>
 }
 @if (error()) {
     <app-error [error]="error()!"></app-error>

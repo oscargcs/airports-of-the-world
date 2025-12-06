@@ -1,8 +1,8 @@
 @import "../../styles";
 
 .header {
-  background: $gray-75;
-  color: $color-white;
+  background: var(--gray-75);
+  color: var(--color-white);
   padding: 20px;
 }
 

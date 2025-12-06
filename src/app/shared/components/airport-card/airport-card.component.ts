@@ -1,7 +1,7 @@
 import {Component, inject, input, InputSignal} from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {Airport} from 'src/app/airports-list-page/airport';
-import {AirportsListService} from 'src/app/airports-list-page/airports-list.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-airport-card',
@@ -11,11 +11,10 @@ import {AirportsListService} from 'src/app/airports-list-page/airports-list.serv
     styleUrl: './airport-card.component.scss'
 })
 export class AirportCardComponent {
-    private airportsListService: AirportsListService = inject(AirportsListService);
+    public router: Router = inject(Router);
     public airport: InputSignal<Airport> = input.required();
 
-    public async clickAirport(key: string): Promise<void> {
-        const airport = await this.airportsListService.getAirport(key);
-        console.log(airport);
+    public clickAirport(key: string): void {
+        this.router.navigate(['airport/' + key]);
     }
 }

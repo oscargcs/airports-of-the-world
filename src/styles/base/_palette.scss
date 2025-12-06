@@ -1,0 +1,30 @@
+$color-primary-a: #FFCC00;
+$color-primary-b: #eae0c3;
+
+$color-white: #FFF;
+$gray-10: #F7F7F7;
+$gray-15: #F3F3F3;
+$gray-18: #E9E9E9;
+$gray-20: #DDD; //color-primary-b--light
+$gray-30: #CCC;
+$gray-45: #999;
+$gray-60: #4D4D4D; //color-primary-b
+$gray-75: #333; // color-primary-b--dark
+$color-black: #000;
+
+:root {
+  --color-primary-a: #{$color-primary-a};
+  --color-primary-b: #{$color-primary-b};
+
+  --gray-10: #{$gray-10};
+  --gray-15: #{$gray-15};
+  --gray-18: #{$gray-18};
+  --gray-20: #{$gray-20};
+  --gray-30: #{$gray-30};
+  --gray-45: #{$gray-45};
+  --gray-60: #{$gray-60};
+  --gray-75: #{$gray-75};
+
+  --color-black: #{$color-black};
+  --color-white: #{$color-white};
+}
