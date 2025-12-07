@@ -1,6 +1,20 @@
 [
   {
     "request": {
+      "method": "POST",
+      "url": "/login",
+      "post": "{\"username\":\"oscar\",\"password\":\"123\"}"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "file": "data/login.json"
+    }
+  },
+  {
+    "request": {
       "url": "/allAirports",
       "method": "GET",
       "headers": {
