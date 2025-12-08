@@ -3,7 +3,7 @@
 @if (airport(); as airport) {
     <div class="container">
         <h1 class="title">{{ airport.name }}</h1>
-        <img class="hero-image" [src]="airport.image" [alt]="'Image of ' + airport.name"/>
+        <img class="airport-image" [src]="airport.image" [alt]="'Image of ' + airport.name"/>
 
         <section>
             <div class="card">
@@ -17,7 +17,6 @@
     </div>
 }
 
-<!-- Loading -->
 @if (!airport()) {
     <div class="loading">
         <app-loading></app-loading>

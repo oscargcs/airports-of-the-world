@@ -3,3 +3,49 @@
 mat-toolbar {
   background: var(--color-primary-a);
 }
+
+.side-padding {
+  padding-left: 254px;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.vueling-logo {
+  height: 22px;
+  width: auto;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  padding-right: 254px;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 16px;
+  background-color: var(--color-white);
+  margin: 0 8px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  gap: 8px;
+  padding-right: 8px;
+  font-size: var(--font-xs);
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  font-size: var(--font-xs);
+  padding: 0 8px;
+}
+
+
+
