@@ -1,26 +1,26 @@
 <mat-toolbar>
-    <div class="side-padding">
-        <button mat-icon-button (click)="navigateBack()">
-            <img alt="Navigate back button" src="../../../assets/arrow-left.svg"/>
-        </button>
-        <img alt="Vueling logo" class="vueling-logo" src="../../../assets/vueling-default.svg"/>
-    </div>
-
-    <span class="fill-remaining-space"></span>
-
-    <div class="right">
-        <div class="user-info">
-            <img src="../../../assets/account-circle.svg" alt="User"/>
-            <span>{{ authService.user()?.username }}</span>
+    <div class="navbar-footer-position">
+        <div>
+            <button mat-icon-button (click)="navigateBack()">
+                <img alt="Navigate back button" src="../../../assets/arrow-left.svg"/>
+            </button>
+            <img alt="Vueling logo" class="vueling-logo" src="../../../assets/vueling-default.svg"/>
         </div>
 
-        <span class="vertical-divider"></span>
+        <div class="right">
+            <div class="user-info">
+                <img src="../../../assets/account-circle.svg" alt="User"/>
+                <span>{{ authService.user()?.username }}</span>
+            </div>
 
-        <div class="logout">
-            <span>Logout</span>
-            <button mat-icon-button (click)="logout()">
-                <img src="../../../assets/logout.svg" alt="Logout button"/>
-            </button>
+            <span class="vertical-divider"></span>
+
+            <div class="logout">
+                <span>Logout</span>
+                <button mat-icon-button (click)="logout()">
+                    <img src="../../../assets/logout.svg" alt="Logout button"/>
+                </button>
+            </div>
         </div>
     </div>
 </mat-toolbar>

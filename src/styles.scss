@@ -28,3 +28,18 @@ p {
   justify-content: center;
   padding: 4rem;
 }
+
+.vertical-divider {
+  width: 1px;
+  height: 16px;
+  background-color: var(--color-white);
+  margin: 0 8px;
+}
+
+.navbar-footer-position {
+  display: flex;
+  justify-content: space-between;
+  max-width: 932px;
+  width: 100%;
+  margin: 0 auto;
+}
