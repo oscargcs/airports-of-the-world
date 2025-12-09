@@ -1,7 +1,10 @@
 @import "../../../../styles";
 
-mat-toolbar {
+.navbar {
+  display: flex;
+  align-items: center;
   background: var(--color-primary-a);
+  height: 64px;
 }
 
 .vueling-logo {

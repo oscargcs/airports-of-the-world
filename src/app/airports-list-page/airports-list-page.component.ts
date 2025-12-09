@@ -5,6 +5,7 @@ import {NavbarComponent} from '../shared/components/navbar-component/navbar.comp
 import {AirportsListComponent} from '../shared/components/airports-list/airports-list.component';
 import {ErrorComponent} from '../shared/components/error/error.component';
 import {LoadingComponent} from '../shared/components/loading/loading.component';
+import {FooterComponent} from '../shared/components/footer/footer.component';
 
 @Component({
     selector: 'app-airports-list-page',
@@ -14,7 +15,8 @@ import {LoadingComponent} from '../shared/components/loading/loading.component';
         NavbarComponent,
         AirportsListComponent,
         ErrorComponent,
-        LoadingComponent
+        LoadingComponent,
+        FooterComponent
     ],
     styleUrls: ['./airports-list-page.component.scss']
 })
