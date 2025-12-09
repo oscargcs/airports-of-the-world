@@ -1,5 +1,5 @@
 import {Component, OnInit, signal} from '@angular/core';
-import {AirportsListService} from './airports-list.service';
+import {AirportsListService} from './services/airports-list.service';
 import {Airport} from './airport';
 import {NavbarComponent} from '../shared/components/navbar-component/navbar.component';
 import {AirportsListComponent} from '../shared/components/airports-list/airports-list.component';

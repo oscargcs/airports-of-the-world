@@ -1,6 +1,6 @@
 import {Component, inject, Signal} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {AirportsListService} from '../../../airports-list-page/airports-list.service';
+import {AirportsListService} from '../../../airports-list-page/services/airports-list.service';
 import {switchMap} from 'rxjs';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {LoadingComponent} from '../loading/loading.component';
