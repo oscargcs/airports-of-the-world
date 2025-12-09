@@ -24,15 +24,15 @@ describe('TextLinkComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should render the href and label correctly', () => {
+    it('should render the href from the input href', () => {
         expect(a.getAttribute('href')).toBe('https://example.com');
     });
 
-    it('should render the correct aria-label', () => {
+    it('should render the aria-label from the input label', () => {
         expect(a.getAttribute('aria-label')).toBe('Example');
     });
 
-    it('should show Example as text', () => {
+    it('should show the text from the input label', () => {
         expect(a.textContent?.trim()).toBe('Example');
     });
 
