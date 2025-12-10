@@ -1,10 +1,19 @@
-.content {
-  padding: 1rem;
-  flex-grow: 1;
-}
-
 .app-layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 932px) 1fr;
+}
+
+.layout-column {
+  grid-column: 2;
+  padding: 1rem 0;
+}
+
+.content {
+  flex-grow: 1;
 }

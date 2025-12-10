@@ -1,8 +1,18 @@
-<div class="airports-list">
-    <h1 class="justify-center">Airports List</h1>
-    <div class="airports-list-containers">
-        @for (airport of airports(); track airport) {
-            <app-airport-card [airport]="airport"></app-airport-card>
-        }
-    </div>
+<div class="page-layout">
+    <aside class="sidebar">
+        <!--        <app-side-menu></app-side-menu>-->
+    </aside>
+
+    <section class="page-content">
+        <h1>Airports list</h1>
+        <img class="hero-image" src="../../../assets/airports-board.svg"/>
+        <p class="page-text">
+            This page allows to see our list of airports. Click on them to know more about them.
+        </p>
+        <div class="airports-list">
+            @for (airport of airports(); track airport) {
+                <app-airport-card [airport]="airport"></app-airport-card>
+            }
+        </div>
+    </section>
 </div>

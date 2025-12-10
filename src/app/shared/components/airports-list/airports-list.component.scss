@@ -2,3 +2,24 @@
   display: flex;
   justify-content: center;
 }
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+}
+
+.airports-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  gap: 16px;
+}
+
+.sidebar {
+  background: blue;
+}
+
+.page-text {
+  font-size: var(--font-size-xs);
+}
