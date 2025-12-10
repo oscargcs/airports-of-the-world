@@ -3,12 +3,6 @@
   justify-content: center;
 }
 
-.page-layout {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 32px;
-}
-
 .airports-list {
   display: flex;
   flex-direction: column;

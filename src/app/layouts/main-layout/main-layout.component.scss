@@ -7,13 +7,13 @@
 .layout-grid {
   display: grid;
   grid-template-columns: 1fr minmax(0, 932px) 1fr;
+  flex-grow: 1;
 }
 
-.layout-column {
+.page-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
   grid-column: 2;
   padding: 1rem 0;
-}
-
-.content {
-  flex-grow: 1;
+  gap: 32px;
 }

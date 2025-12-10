@@ -1,18 +1,10 @@
-<div class="page-layout">
-    <aside>
-        <app-side-menu></app-side-menu>
-    </aside>
-
-    <section class="page-content">
-        <h1>Airports list</h1>
-        <img src="../../../assets/airports-board.svg" alt="Image of airports board"/>
-        <p class="page-text">
-            This page allows to see our list of airports. Click on them to know more about them.
-        </p>
-        <div class="airports-list">
-            @for (airport of airports(); track airport) {
-                <app-airport-card [airport]="airport"></app-airport-card>
-            }
-        </div>
-    </section>
+<h1>Airports list</h1>
+<img src="../../../assets/airports-board.svg" alt="Image of airports board"/>
+<p class="page-text">
+    This page allows to see our list of airports. Click on them to know more about them.
+</p>
+<div class="airports-list">
+    @for (airport of airports(); track airport) {
+        <app-airport-card [airport]="airport"></app-airport-card>
+    }
 </div>
