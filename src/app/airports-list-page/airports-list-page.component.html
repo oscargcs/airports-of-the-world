@@ -1,4 +1,3 @@
-<app-navbar-component></app-navbar-component>
 @if (airportsList()) {
     <app-airports-list [airports]="airportsList()!"></app-airports-list>
 }
@@ -10,5 +9,3 @@
 @if (error()) {
     <app-error [error]="error()!"></app-error>
 }
-<app-footer></app-footer>
-

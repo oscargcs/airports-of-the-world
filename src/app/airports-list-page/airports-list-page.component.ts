@@ -1,22 +1,18 @@
 import {Component, OnInit, signal} from '@angular/core';
 import {AirportsListService} from './services/airports-list.service';
 import {Airport} from './airport';
-import {NavbarComponent} from '../shared/components/navbar-component/navbar.component';
 import {AirportsListComponent} from '../shared/components/airports-list/airports-list.component';
 import {ErrorComponent} from '../shared/components/error/error.component';
 import {LoadingComponent} from '../shared/components/loading/loading.component';
-import {FooterComponent} from '../shared/components/footer/footer.component';
 
 @Component({
     selector: 'app-airports-list-page',
     templateUrl: './airports-list-page.component.html',
     standalone: true,
     imports: [
-        NavbarComponent,
         AirportsListComponent,
         ErrorComponent,
-        LoadingComponent,
-        FooterComponent
+        LoadingComponent
     ],
     styleUrls: ['./airports-list-page.component.scss']
 })

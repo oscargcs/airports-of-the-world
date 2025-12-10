@@ -4,18 +4,12 @@ import {AirportsListService} from '../../../airports-list-page/services/airports
 import {switchMap} from 'rxjs';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {LoadingComponent} from '../loading/loading.component';
-import {NavbarComponent} from '../navbar-component/navbar.component';
 import {ExtendedAirport} from '../../../airports-list-page/airport';
-import {FooterComponent} from '../footer/footer.component';
 
 @Component({
     selector: 'app-single-airport',
     standalone: true,
-    imports: [
-        LoadingComponent,
-        NavbarComponent,
-        FooterComponent
-    ],
+    imports: [LoadingComponent],
     templateUrl: './single-airport.component.html',
     styleUrl: './single-airport.component.scss'
 })

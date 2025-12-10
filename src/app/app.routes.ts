@@ -12,15 +12,22 @@ export const routes: Routes = [
         loadComponent: () => import('./authentication/components/login/login.component')
     },
     {
-        path: 'airportsList',
-        loadComponent: () => import('./airports-list-page/airports-list-page.component'),
-        canMatch: [AuthenticatedGuard]
-    },
-    {
-        path: 'airport/:key',
-        title: 'Airport',
-        loadComponent: () => import('./shared/components/single-airport/./single-airport.component'),
-        canMatch: [AuthenticatedGuard]
-    },
+        path: '',
+        loadComponent: () => import('./layouts/main-layout/main-layout.component'),
+        canMatch: [AuthenticatedGuard],
+        children: [
+            {
+                path: 'airportsList',
+                loadComponent: () =>
+                    import('./airports-list-page/airports-list-page.component')
+            },
+            {
+                path: 'airport/:key',
+                title: 'Airport',
+                loadComponent: () =>
+                    import('./shared/components/single-airport/single-airport.component')
+            }
+        ]
+    }
 ];
 
