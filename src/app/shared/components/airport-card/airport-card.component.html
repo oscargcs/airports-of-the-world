@@ -1,5 +1,5 @@
-<mat-card class="cursor-pointer" (click)="clickAirport(airport().key)">
-    <mat-card-header>
+<mat-card class="cursor-pointer shadowless-gray-border" (click)="clickAirport(airport().key)">
+    <mat-card-header class="mb-1">
         <mat-card-title>{{ airport().name }}</mat-card-title>
         <mat-card-subtitle>{{ airport().key }}</mat-card-subtitle>
     </mat-card-header>
@@ -8,4 +8,3 @@
         <p><strong>Country:</strong> {{ airport().country }}</p>
     </mat-card-content>
 </mat-card>
-

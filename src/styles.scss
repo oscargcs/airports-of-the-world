@@ -4,19 +4,22 @@ html, body {
   height: 100%;
   background: var(--gray-10);
   margin: 0;
-  font-family: var(--font-primary);
+  font-family: var(--font-family-base);
 }
 
-h1 {
+.heading-xl {
   font-size: var(--font-xl);
+  font-weight: var(--font-weight-bold);
 }
 
-h2 {
-  font-size: var(--font-lg); //todo: mira si has de posar font-weight
+.heading-lg {
+  font-size: var(--font-xl);
+  font-weight: var(--font-weight-bold);
 }
 
-h3 {
+.heading-md {
   font-size: var(--font-md);
+  font-weight: var(--font-weight-bold);
 }
 
 p {
@@ -51,4 +54,8 @@ p {
 .footer a:hover,
 .footer a:focus-visible {
   text-decoration: underline;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
 }

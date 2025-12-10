@@ -1,18 +1,14 @@
 @if (airport(); as airport) {
-    <div class="container">
-        <h1 class="title">{{ airport.name }}</h1>
-        <img class="airport-image" [src]="airport.image" [alt]="'Image of ' + airport.name"/>
+    <h1 class="title">{{ airport.name }}</h1>
+    <img class="airport-image" [src]="airport.image" [alt]="'Image of ' + airport.name"/>
 
-        <section>
-            <div class="card">
-                <h3>General Information</h3>
-                <p><strong>City:</strong> {{ airport.city }}</p>
-                <p><strong>Country:</strong> {{ airport.country }}</p>
-                <p><strong>Owner:</strong> {{ airport.owner }}</p>
-                <p><strong>Built:</strong> {{ airport.build }}</p>
-            </div>
-        </section>
-    </div>
+    <section class="card">
+        <h3 class="heading-md">General Information</h3>
+        <p><strong>City:</strong> {{ airport.city }}</p>
+        <p><strong>Country:</strong> {{ airport.country }}</p>
+        <p><strong>Owner:</strong> {{ airport.owner }}</p>
+        <p><strong>Built:</strong> {{ airport.build }}</p>
+    </section>
 }
 
 @if (!airport()) {

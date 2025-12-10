@@ -4,7 +4,7 @@ import {AuthenticatedGuard} from './authentication/guards/authenticated.guard';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: '/airportsList',
+        redirectTo: '/airports',
         pathMatch: 'full'
     },
     {
@@ -17,12 +17,12 @@ export const routes: Routes = [
         canMatch: [AuthenticatedGuard],
         children: [
             {
-                path: 'airportsList',
+                path: 'airports',
                 loadComponent: () =>
                     import('./airports-list-page/airports-list-page.component')
             },
             {
-                path: 'airport/:key',
+                path: 'airports/:key',
                 title: 'Airport',
                 loadComponent: () =>
                     import('./shared/components/single-airport/single-airport.component')

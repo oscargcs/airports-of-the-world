@@ -2,7 +2,9 @@
     <ul>
         @for (item of menuItems(); track $index) {
             <li>
-                <a href="{{ item.link }}">
+                <a routerLinkActive="active"
+                   [routerLinkActiveOptions]="{ exact: false }"
+                   [routerLink]="item.link">
                     <span class="menu-text">{{ item.label }}</span>
                     <span class="menu-icon">></span>
                 </a>

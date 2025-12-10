@@ -1,15 +1,17 @@
 import {Component, signal} from '@angular/core';
+import {RouterLink, RouterLinkActive} from '@angular/router';
+import {SideMenuOptions} from '../types/side-menu-options';
 
 @Component({
     selector: 'app-side-menu',
     standalone: true,
-    imports: [],
+    imports: [
+        RouterLink,
+        RouterLinkActive
+    ],
     templateUrl: './side-menu.component.html',
     styleUrl: './side-menu.component.scss'
 })
 export class SideMenuComponent {
-    menuItems = signal([
-        {label: 'Menu ítem 1', link: '#'},
-        {label: 'Menu ítem 2', link: '#'}
-    ]); // make it an input
+    menuItems = signal<SideMenuOptions[]>([{label: 'Airports', link: '/airports'}]);
 }

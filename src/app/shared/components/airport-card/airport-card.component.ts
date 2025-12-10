@@ -15,6 +15,6 @@ export class AirportCardComponent {
     public airport: InputSignal<Airport> = input.required();
 
     public clickAirport(key: string): void {
-        this.router.navigate(['airport/' + key]);
+        this.router.navigate(['airports/' + key]);
     }
 }
