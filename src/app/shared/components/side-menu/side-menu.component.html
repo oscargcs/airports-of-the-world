@@ -1,0 +1,12 @@
+<nav class="side-menu">
+    <ul>
+        @for (item of menuItems(); track $index) {
+            <li>
+                <a href="{{ item.link }}">
+                    <span class="menu-text">{{ item.label }}</span>
+                    <span class="menu-icon">></span>
+                </a>
+            </li>
+        }
+    </ul>
+</nav>
