@@ -7,17 +7,17 @@ html, body {
   font-family: var(--font-family-base);
 }
 
-.heading-xl {
+h1.heading-xl {
   font-size: var(--font-xl);
   font-weight: var(--font-weight-bold);
 }
 
-.heading-lg {
+h2.heading-lg {
   font-size: var(--font-xl);
   font-weight: var(--font-weight-bold);
 }
 
-.heading-md {
+h3.heading-md {
   font-size: var(--font-md);
   font-weight: var(--font-weight-bold);
 }
