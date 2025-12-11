@@ -11,6 +11,7 @@ $gray-45: #999;
 $gray-60: #4D4D4D;
 $gray-75: #333;
 $color-black: #000;
+$color-red: #ff0000;
 
 :root {
   --color-primary-a: #{$color-primary-a};
@@ -27,4 +28,5 @@ $color-black: #000;
 
   --color-black: #{$color-black};
   --color-white: #{$color-white};
+  --color-red: #{$color-red};
 }
