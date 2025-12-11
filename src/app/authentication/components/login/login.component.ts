@@ -9,7 +9,6 @@ import {MatButton} from '@angular/material/button';
 
 @Component({
     selector: 'app-login',
-    standalone: true,
     imports: [
         MatFormField,
         MatLabel,

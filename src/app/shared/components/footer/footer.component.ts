@@ -6,7 +6,6 @@ import {TextLinkComponent} from '../text-link/text-link.component';
 
 @Component({
     selector: 'app-footer',
-    standalone: true,
     imports: [
         SocialLinkComponent,
         TextLinkComponent

@@ -8,7 +8,6 @@ import {LoadingComponent} from '../shared/components/loading/loading.component';
 @Component({
     selector: 'app-airports-list-page',
     templateUrl: './airports-list-page.component.html',
-    standalone: true,
     imports: [
         AirportsListComponent,
         ErrorComponent,

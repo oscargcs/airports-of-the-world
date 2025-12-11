@@ -5,7 +5,6 @@ import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-airport-card',
-    standalone: true,
     imports: [MatCardModule],
     templateUrl: './airport-card.component.html',
     styleUrl: './airport-card.component.scss'

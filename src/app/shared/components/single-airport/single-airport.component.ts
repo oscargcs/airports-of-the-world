@@ -8,7 +8,6 @@ import {ExtendedAirport} from '../../../airports-list-page/airport';
 
 @Component({
     selector: 'app-single-airport',
-    standalone: true,
     imports: [LoadingComponent],
     templateUrl: './single-airport.component.html',
     styleUrl: './single-airport.component.scss'

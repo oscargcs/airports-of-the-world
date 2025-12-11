@@ -6,7 +6,6 @@ import {SideMenuComponent} from '../../shared/components/side-menu/side-menu.com
 
 @Component({
     selector: 'app-main-layout',
-    standalone: true,
     imports: [
         FooterComponent,
         NavbarComponent,

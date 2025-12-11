@@ -3,7 +3,6 @@ import {SocialPlatformName} from '../types/social-platform-name';
 
 @Component({
     selector: 'app-social-icon-link',
-    standalone: true,
     imports: [],
     templateUrl: './social-link.component.html',
     styleUrl: './social-link.component.scss'

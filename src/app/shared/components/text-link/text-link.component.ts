@@ -2,7 +2,6 @@ import {Component, input, InputSignal} from '@angular/core';
 
 @Component({
     selector: 'app-text-link',
-    standalone: true,
     imports: [],
     templateUrl: './text-link.component.html',
     styleUrl: './text-link.component.scss'

@@ -6,7 +6,6 @@ import {MatIconButton} from '@angular/material/button';
 
 @Component({
     selector: 'app-navbar-component',
-    standalone: true,
     imports: [MatIconButton],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.scss'

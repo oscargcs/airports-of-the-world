@@ -4,7 +4,6 @@ import {SideMenuOptions} from '../types/side-menu-options';
 
 @Component({
     selector: 'app-side-menu',
-    standalone: true,
     imports: [
         RouterLink,
         RouterLinkActive
