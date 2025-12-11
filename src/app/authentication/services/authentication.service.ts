@@ -1,5 +1,5 @@
 import {computed, inject, Injectable, signal} from '@angular/core';
-import {catchError, map, Observable, of} from 'rxjs';
+import {catchError, map, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 import {AuthResponse} from '../types/auth-response';
@@ -34,7 +34,9 @@ export class AuthenticationService {
                 localStorage.setItem('user', JSON.stringify(res.user));
                 return true;
             }),
-            catchError(() => of(false))
+            catchError((error) => {
+                throw error;
+            })
         );
     }
 

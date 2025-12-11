@@ -6,7 +6,7 @@
 
 .mat-form-field {
   width: 100%;
-  min-width: 300px;
+  max-width: 300px;
 }
 
 mat-card-title,
@@ -16,10 +16,12 @@ mat-card-content {
 }
 
 .error {
+  width: 100%;
   padding: 16px;
-  width: 300px;
   color: white;
   background-color: red;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 
 .button {
