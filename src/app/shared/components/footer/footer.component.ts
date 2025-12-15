@@ -1,8 +1,8 @@
 import {Component, signal} from '@angular/core';
-import {SocialLinkComponent} from '../clickable-icon/social-link.component';
+import {SocialLinkComponent} from '../../ui/clickable-icon/social-link.component';
 import {SocialPlatformName} from '../types/social-platform-name';
 import {ClickableTextLink} from '../types/clicable-text-link';
-import {TextLinkComponent} from '../text-link/text-link.component';
+import {TextLinkComponent} from '../../ui/text-link/text-link.component';
 
 @Component({
     selector: 'app-footer',
@@ -14,7 +14,7 @@ import {TextLinkComponent} from '../text-link/text-link.component';
     styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-    textLinks = signal<ClickableTextLink[]>([
+    public textLinks = signal<ClickableTextLink[]>([
         {
             label: 'About us',
             href: 'https://www.vueling.com/en/about-us'
@@ -25,5 +25,5 @@ export class FooterComponent {
         }
     ]);
 
-    iconLinks = signal<SocialPlatformName[]>(['twitter', 'facebook', 'instagram', 'youtube']);
+    public iconLinks = signal<SocialPlatformName[]>(['twitter', 'facebook', 'instagram', 'youtube']);
 }

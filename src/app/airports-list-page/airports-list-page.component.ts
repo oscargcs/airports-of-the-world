@@ -1,9 +1,10 @@
-import {Component, OnInit, signal} from '@angular/core';
+import {Component, inject, OnInit, signal} from '@angular/core';
 import {AirportsListService} from './services/airports-list.service';
 import {Airport} from './airport';
 import {AirportsListComponent} from '../shared/components/airports-list/airports-list.component';
 import {ErrorComponent} from '../shared/components/error/error.component';
 import {LoadingComponent} from '../shared/components/loading/loading.component';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
     selector: 'app-airports-list-page',
@@ -19,15 +20,14 @@ export default class AirportsListPageComponent implements OnInit {
     public airportsList = signal<Airport[] | undefined>(undefined);
     public error = signal<string | null>(null);
 
-    constructor(private airportsListService: AirportsListService) {
-    }
+    private airportsListService = inject(AirportsListService);
 
     public ngOnInit(): void {
         this.airportsListService.getAllAirports().subscribe({
             next: (res: Airport[] | undefined) => {
                 this.airportsList.set(res);
             },
-            error: (error) => {
+            error: (error: HttpErrorResponse) => {
                 this.error.set(error.message);
             }
         });

@@ -7,6 +7,6 @@ import {Component, input, InputSignal} from '@angular/core';
     styleUrl: './text-link.component.scss'
 })
 export class TextLinkComponent {
-    href: InputSignal<string> = input.required();
-    label: InputSignal<string> = input.required();
+    public href: InputSignal<string> = input.required();
+    public label: InputSignal<string> = input.required();
 }

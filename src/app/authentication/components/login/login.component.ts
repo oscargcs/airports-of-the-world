@@ -1,5 +1,5 @@
 import {Component, inject, Signal} from '@angular/core';
-import {MatError, MatFormField, MatLabel} from '@angular/material/form-field';
+import {MatFormField, MatLabel} from '@angular/material/form-field';
 import {MatCard, MatCardContent, MatCardTitle} from '@angular/material/card';
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
@@ -15,7 +15,6 @@ import {MatProgressSpinner} from '@angular/material/progress-spinner';
     imports: [
         MatFormField,
         MatLabel,
-        MatError,
         MatCardContent,
         MatCardTitle,
         MatCard,
@@ -28,26 +27,24 @@ import {MatProgressSpinner} from '@angular/material/progress-spinner';
     styleUrl: './login.component.scss'
 })
 export default class LoginComponent {
-    error: Signal<string | null>;
-    isLoading: Signal<boolean>;
+    public error: Signal<string | null>;
+    public isLoading: Signal<boolean>;
+    public loginForm: FormGroup;
 
-    fb: FormBuilder = inject(FormBuilder);
-    store = inject(Store);
+    private fb = inject(FormBuilder);
+    private store = inject(Store);
 
     constructor() {
-        this.error = toSignal(
-            this.store.select(selectError),
-            {initialValue: null}
-        );
+        this.error = toSignal(this.store.select(selectError), {initialValue: null});
         this.isLoading = toSignal(this.store.select(selectIsLoading), {initialValue: false});
+
+        this.loginForm = this.fb.group({
+            username: ['', [Validators.required]],
+            password: ['', [Validators.required]],
+        });
     }
 
-    loginForm: FormGroup = this.fb.group({
-        username: ['', [Validators.required]],
-        password: ['', [Validators.required]],
-    });
-
-    onSubmit(): void {
+    public onSubmit(): void {
         if (this.loginForm.invalid) {
             return;
         }
@@ -57,7 +54,7 @@ export default class LoginComponent {
         this.store.dispatch(login({username, password}));
     }
 
-    isControlInvalid(controlName: string): boolean {
+    public isControlInvalid(controlName: string): boolean {
         const control: FormControl = this.loginForm.get(controlName) as FormControl;
         return control.invalid;
     }

@@ -13,7 +13,7 @@ import {ExtendedAirport} from '../../../airports-list-page/airport';
     styleUrl: './single-airport.component.scss'
 })
 export default class SingleAirportComponent {
-    private airportsListService: AirportsListService = inject(AirportsListService);
+    private airportsListService = inject(AirportsListService);
 
     public route: ActivatedRoute = inject(ActivatedRoute);
     public airport: Signal<ExtendedAirport | undefined> = toSignal(

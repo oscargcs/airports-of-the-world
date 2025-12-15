@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
     styleUrl: './airport-card.component.scss'
 })
 export class AirportCardComponent {
-    public router: Router = inject(Router);
+    private router = inject(Router);
     public airport: InputSignal<Airport> = input.required();
 
     public clickAirport(key: string): void {

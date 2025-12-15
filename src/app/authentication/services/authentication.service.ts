@@ -9,7 +9,7 @@ export class AuthenticationService {
     private http: HttpClient = inject(HttpClient);
     private readonly API_URL: string = environment.baseUrl;
 
-    login(username: string, password: string): Observable<AuthResponse> {
+    public login(username: string, password: string): Observable<AuthResponse> {
         return this.http.post<AuthResponse>(`${this.API_URL}/login`, {username, password});
     }
 }

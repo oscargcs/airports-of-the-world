@@ -10,9 +10,9 @@ import {AUTH_STORAGE_KEYS} from '../types/auth-storage.keys';
 
 @Injectable()
 export class AuthEffects {
-    authenticationService = inject(AuthenticationService);
-    actions$ = inject(Actions);
-    router = inject(Router);
+    private authenticationService = inject(AuthenticationService);
+    private actions$ = inject(Actions);
+    private router = inject(Router);
 
     login$ = createEffect(() =>
         this.actions$.pipe(

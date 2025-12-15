@@ -1,5 +1,4 @@
 import {Component, computed, inject, Signal} from '@angular/core';
-import {Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {MatIconButton} from '@angular/material/button';
 import {Store} from '@ngrx/store';
@@ -15,16 +14,15 @@ import {toSignal} from '@angular/core/rxjs-interop';
     styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-    router = inject(Router);
-    location = inject(Location);
-    store = inject(Store);
+    private location = inject(Location);
+    private store = inject(Store);
 
-    user: Signal<User | null> = toSignal(
+    private user: Signal<User | null> = toSignal(
         this.store.select(selectUser),
         {initialValue: null}
     );
 
-    username = computed(() => this.user()?.username);
+    public username = computed(() => this.user()?.username);
 
     logout(): void {
         this.store.dispatch(logout());

@@ -12,5 +12,5 @@ import {SideMenuOptions} from '../types/side-menu-options';
     styleUrl: './side-menu.component.scss'
 })
 export class SideMenuComponent {
-    menuItems = signal<SideMenuOptions[]>([{label: 'Airports', link: '/airports'}]);
+    public menuItems = signal<SideMenuOptions[]>([{label: 'Airports', link: '/airports'}]);
 }

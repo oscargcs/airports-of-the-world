@@ -7,7 +7,7 @@ import {environment} from '../../../environments/environment';
 @Injectable({providedIn: 'root'})
 export class AirportsListService {
 
-    private http: HttpClient = inject(HttpClient);
+    private http = inject(HttpClient);
     private readonly API_URL: string = environment.baseUrl;
 
     public getAllAirports(): Observable<Airport[] | undefined> {
