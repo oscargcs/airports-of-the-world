@@ -1,8 +1,12 @@
-import {Component, inject} from '@angular/core';
+import {Component, computed, inject, Signal} from '@angular/core';
 import {Router} from '@angular/router';
-import {AuthenticationService} from '../../../authentication/services/authentication.service';
 import {Location} from '@angular/common';
 import {MatIconButton} from '@angular/material/button';
+import {Store} from '@ngrx/store';
+import {logout} from '../../../authentication/store/auth.actions';
+import {selectUser} from '../../../authentication/store/auth.selectors';
+import {User} from '../../../authentication/types/user';
+import {toSignal} from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-navbar-component',
@@ -11,13 +15,19 @@ import {MatIconButton} from '@angular/material/button';
     styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-    authService = inject(AuthenticationService);
     router = inject(Router);
     location = inject(Location);
+    store = inject(Store);
+
+    user: Signal<User | null> = toSignal(
+        this.store.select(selectUser),
+        {initialValue: null}
+    );
+
+    username = computed(() => this.user()?.username);
 
     logout(): void {
-        this.authService.logout();
-        this.router.navigateByUrl('/login');
+        this.store.dispatch(logout());
     }
 
     navigateBack(): void {

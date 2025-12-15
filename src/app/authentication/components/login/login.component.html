@@ -26,9 +26,15 @@
                 <div class="error">{{ error() }}</div>
             }
 
-            <div class="button">
-                <button type="submit" mat-button>Login</button>
-            </div>
+            @if (isLoading()) {
+                <div class="button">
+                    <mat-spinner [diameter]="16"></mat-spinner>
+                </div>
+            } @else {
+                <div class="button">
+                    <button type="submit" mat-button>Login</button>
+                </div>
+            }
         </form>
     </mat-card-content>
 </mat-card>

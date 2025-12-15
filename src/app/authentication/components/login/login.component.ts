@@ -1,12 +1,14 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, inject, Signal} from '@angular/core';
 import {MatError, MatFormField, MatLabel} from '@angular/material/form-field';
 import {MatCard, MatCardContent, MatCardTitle} from '@angular/material/card';
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {Router} from '@angular/router';
-import {AuthenticationService} from '../../services/authentication.service';
 import {MatInputModule} from '@angular/material/input';
 import {MatButton} from '@angular/material/button';
-import {HttpErrorResponse} from '@angular/common/http';
+import {Store} from '@ngrx/store';
+import {login} from '../../store/auth.actions';
+import {selectError, selectIsLoading} from '../../store/auth.selectors';
+import {toSignal} from '@angular/core/rxjs-interop';
+import {MatProgressSpinner} from '@angular/material/progress-spinner';
 
 @Component({
     selector: 'app-login',
@@ -19,17 +21,26 @@ import {HttpErrorResponse} from '@angular/common/http';
         MatCard,
         MatInputModule,
         ReactiveFormsModule,
-        MatButton
+        MatButton,
+        MatProgressSpinner
     ],
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss'
 })
 export default class LoginComponent {
-    fb: FormBuilder = inject(FormBuilder);
-    router: Router = inject(Router);
-    error = signal<string | undefined>('');
+    error: Signal<string | null>;
+    isLoading: Signal<boolean>;
 
-    authService: AuthenticationService = inject(AuthenticationService);
+    fb: FormBuilder = inject(FormBuilder);
+    store = inject(Store);
+
+    constructor() {
+        this.error = toSignal(
+            this.store.select(selectError),
+            {initialValue: null}
+        );
+        this.isLoading = toSignal(this.store.select(selectIsLoading), {initialValue: false});
+    }
 
     loginForm: FormGroup = this.fb.group({
         username: ['', [Validators.required]],
@@ -43,18 +54,7 @@ export default class LoginComponent {
 
         const {username = '', password = ''} = this.loginForm.value;
 
-        this.authService.login(username, password).subscribe({
-                next: (isAuthenticated: boolean) => {
-                    if (isAuthenticated) {
-                        this.router.navigateByUrl('/');
-                        return;
-                    }
-                },
-                error: (error: HttpErrorResponse) => {
-                    this.error.set(error.error.message);
-                }
-            }
-        );
+        this.store.dispatch(login({username, password}));
     }
 
     isControlInvalid(controlName: string): boolean {

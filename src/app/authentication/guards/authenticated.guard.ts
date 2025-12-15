@@ -1,15 +1,23 @@
 import {inject} from '@angular/core';
 import {CanMatchFn, Router} from '@angular/router';
-import {AuthenticationService} from '../services/authentication.service';
+import {Store} from '@ngrx/store';
+import {first, map} from 'rxjs';
+import {selectIsAuthenticated} from '../store/auth.selectors';
+
 
 export const AuthenticatedGuard: CanMatchFn = () => {
-    const auth: AuthenticationService = inject(AuthenticationService);
-    const router: Router = inject(Router);
+    const store = inject(Store);
+    const router = inject(Router);
 
-    if (!auth.isAuthenticated()) {
-        router.navigateByUrl('/login');
-        return false;
-    }
-
-    return true;
+    return store.select(selectIsAuthenticated).pipe(
+        first(),
+        map((isAuthenticated: boolean) => {
+            if (!isAuthenticated) {
+                router.navigateByUrl('/login');
+                return false;
+            }
+            return true;
+        })
+    );
 };
+
