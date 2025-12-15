@@ -51,7 +51,7 @@ export default class LoginComponent {
 
         const {username = '', password = ''} = this.loginForm.value;
 
-        this.store.dispatch(login({username, password}));
+        this.store.dispatch(login({username: username.trim(), password}));
     }
 
     public isControlInvalid(controlName: string): boolean {
