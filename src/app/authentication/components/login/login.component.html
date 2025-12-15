@@ -23,12 +23,13 @@
             </p>
 
             @if (error()) {
-                <div class="error">{{ error() }}</div>
+                <div class="error" role="alert" aria-live="assertive">{{ error() }}</div>
             }
 
             @if (isLoading()) {
-                <div class="button">
+                <div class="button" role="status" aria-live="polite">
                     <mat-spinner [diameter]="16"></mat-spinner>
+                    <span class="cdk-visually-hidden">Logging in</span>
                 </div>
             } @else {
                 <div class="button">
