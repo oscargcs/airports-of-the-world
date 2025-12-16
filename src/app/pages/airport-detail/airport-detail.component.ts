@@ -9,10 +9,10 @@ import {AirportsListService} from '../airports-list-page/services/airports-list.
 @Component({
     selector: 'app-single-airport',
     imports: [LoadingComponent],
-    templateUrl: './single-airport.component.html',
-    styleUrl: './single-airport.component.scss'
+    templateUrl: './airport-detail.component.html',
+    styleUrl: './airport-detail.component.scss'
 })
-export default class SingleAirportComponent {
+export default class AirportDetailComponent {
     private airportsListService = inject(AirportsListService);
 
     public route: ActivatedRoute = inject(ActivatedRoute);

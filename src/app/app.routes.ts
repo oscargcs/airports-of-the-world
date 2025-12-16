@@ -25,7 +25,7 @@ export const routes: Routes = [
                 path: 'airports/:key',
                 title: 'Airport',
                 loadComponent: () =>
-                    import('./pages/single-airport/single-airport.component')
+                    import('./pages/airport-detail/./airport-detail.component')
             }
         ]
     }
