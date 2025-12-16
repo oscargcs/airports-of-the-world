@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, input} from '@angular/core';
 import {RouterLink, RouterLinkActive} from '@angular/router';
 import {SideMenuOptions} from '../types/side-menu-options';
 
@@ -12,5 +12,5 @@ import {SideMenuOptions} from '../types/side-menu-options';
     styleUrl: './side-menu.component.scss'
 })
 export class SideMenuComponent {
-    public menuItems = signal<SideMenuOptions[]>([{label: 'Airports', link: '/airports'}]);
+    public menuItems = input.required<SideMenuOptions[]>();
 }

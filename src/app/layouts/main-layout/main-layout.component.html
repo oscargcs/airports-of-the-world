@@ -4,7 +4,7 @@
     <main class="layout-grid">
         <div class="page-layout">
             <aside>
-                <app-side-menu></app-side-menu>
+                <app-side-menu [menuItems]="menuItems()"></app-side-menu>
             </aside>
             <div class="page-content">
                 <router-outlet></router-outlet>

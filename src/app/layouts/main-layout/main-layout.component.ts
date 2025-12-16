@@ -5,6 +5,7 @@ import {RouterOutlet} from '@angular/router';
 import {SideMenuComponent} from '../../shared/components/side-menu/side-menu.component';
 import {ClickableTextLink} from '../../shared/components/types/clicable-text-link';
 import {SocialPlatformName} from '../../shared/components/types/social-platform-name';
+import {SideMenuOptions} from '../../shared/components/types/side-menu-options';
 
 @Component({
     selector: 'app-main-layout',
@@ -18,6 +19,10 @@ import {SocialPlatformName} from '../../shared/components/types/social-platform-
     styleUrl: './main-layout.component.scss'
 })
 export default class MainLayoutComponent {
+    
+    public menuItems = signal<SideMenuOptions[]>([{label: 'Airports', link: '/airports'}]);
+
+    //footer links:
     public textLinks = signal<ClickableTextLink[]>([
         {
             label: 'About us',
