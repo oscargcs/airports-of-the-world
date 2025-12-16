@@ -1,6 +1,6 @@
 import {Component, inject, Signal} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {switchMap} from 'rxjs';
+import {first, switchMap} from 'rxjs';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {LoadingComponent} from '../../shared/components/loading/loading.component';
 import {ExtendedAirport} from '../../shared/types/airport';
@@ -18,6 +18,7 @@ export default class AirportDetailComponent {
     public route: ActivatedRoute = inject(ActivatedRoute);
     public airport: Signal<ExtendedAirport | undefined> = toSignal(
         this.route.params.pipe(
+            first(),
             switchMap(({key}: Params) => this.airportsListService.getAirport(key))
         )
     );
