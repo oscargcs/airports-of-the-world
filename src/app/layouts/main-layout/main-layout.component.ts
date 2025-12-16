@@ -3,9 +3,9 @@ import {FooterComponent} from '../../shared/components/footer/footer.component';
 import {NavbarComponent} from '../../shared/components/navbar-component/navbar.component';
 import {RouterOutlet} from '@angular/router';
 import {SideMenuComponent} from '../../shared/components/side-menu/side-menu.component';
-import {ClickableTextLink} from '../../shared/components/types/clicable-text-link';
-import {SocialPlatformName} from '../../shared/components/types/social-platform-name';
-import {SideMenuOptions} from '../../shared/components/types/side-menu-options';
+import {ClickableTextLink} from '../../shared/types/clicable-text-link';
+import {SocialPlatformName} from '../../shared/types/social-platform-name';
+import {SideMenuOptions} from '../../shared/types/side-menu-options';
 
 @Component({
     selector: 'app-main-layout',
@@ -19,7 +19,7 @@ import {SideMenuOptions} from '../../shared/components/types/side-menu-options';
     styleUrl: './main-layout.component.scss'
 })
 export default class MainLayoutComponent {
-    
+
     public menuItems = signal<SideMenuOptions[]>([{label: 'Airports', link: '/airports'}]);
 
     //footer links:

@@ -1,6 +1,6 @@
 import {Component, input} from '@angular/core';
 import {RouterLink, RouterLinkActive} from '@angular/router';
-import {SideMenuOptions} from '../types/side-menu-options';
+import {SideMenuOptions} from '../../types/side-menu-options';
 
 @Component({
     selector: 'app-side-menu',

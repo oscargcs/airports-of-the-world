@@ -1,10 +1,10 @@
 import {Component, inject, Signal} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {AirportsListService} from '../../../airports-list-page/services/airports-list.service';
 import {switchMap} from 'rxjs';
 import {toSignal} from '@angular/core/rxjs-interop';
-import {LoadingComponent} from '../loading/loading.component';
-import {ExtendedAirport} from '../../../airports-list-page/airport';
+import {LoadingComponent} from '../../shared/components/loading/loading.component';
+import {ExtendedAirport} from '../../shared/types/airport';
+import {AirportsListService} from '../airports-list-page/services/airports-list.service';
 
 @Component({
     selector: 'app-single-airport',

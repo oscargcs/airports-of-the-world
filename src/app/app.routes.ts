@@ -19,13 +19,13 @@ export const routes: Routes = [
             {
                 path: 'airports',
                 loadComponent: () =>
-                    import('./airports-list-page/airports-list-page.component')
+                    import('./pages/airports-list-page/airports-list-page.component')
             },
             {
                 path: 'airports/:key',
                 title: 'Airport',
                 loadComponent: () =>
-                    import('./shared/components/single-airport/single-airport.component')
+                    import('./pages/single-airport/single-airport.component')
             }
         ]
     }

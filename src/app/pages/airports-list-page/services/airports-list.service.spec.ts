@@ -1,9 +1,9 @@
-import {AirportsListService} from './airports-list.service';
-import {environment} from '../../../environments/environment';
-import {Airport, ExtendedAirport} from '../airport';
+import {Airport, ExtendedAirport} from '../../../shared/types/airport';
 import {HttpTestingController, provideHttpClientTesting, TestRequest} from '@angular/common/http/testing';
 import {TestBed} from '@angular/core/testing';
 import {provideHttpClient} from '@angular/common/http';
+import {AirportsListService} from './airports-list.service';
+import {environment} from '../../../../environments/environment';
 
 describe('AirportsListService', () => {
     let airportsListService: AirportsListService;

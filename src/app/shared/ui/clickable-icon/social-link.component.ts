@@ -1,5 +1,5 @@
 import {Component, computed, input, InputSignal, Signal} from '@angular/core';
-import {SocialPlatformName} from '../../components/types/social-platform-name';
+import {SocialPlatformName} from '../../types/social-platform-name';
 
 @Component({
     selector: 'app-social-icon-link',

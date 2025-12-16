@@ -1,10 +1,10 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
 import {AirportsListService} from './services/airports-list.service';
-import {Airport} from './airport';
-import {AirportsListComponent} from '../shared/components/airports-list/airports-list.component';
-import {ErrorComponent} from '../shared/components/error/error.component';
-import {LoadingComponent} from '../shared/components/loading/loading.component';
+import {Airport} from '../../shared/types/airport';
 import {HttpErrorResponse} from '@angular/common/http';
+import {AirportsListComponent} from '../airports-list/airports-list.component';
+import {ErrorComponent} from '../../shared/components/error/error.component';
+import {LoadingComponent} from '../../shared/components/loading/loading.component';
 
 @Component({
     selector: 'app-airports-list-page',

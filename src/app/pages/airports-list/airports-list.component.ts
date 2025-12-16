@@ -1,6 +1,6 @@
 import {Component, input, InputSignal} from '@angular/core';
-import {Airport} from 'src/app/airports-list-page/airport';
-import {AirportCardComponent} from '../airport-card/airport-card.component';
+import {AirportCardComponent} from '../../shared/components/airport-card/airport-card.component';
+import {Airport} from '../../shared/types/airport';
 
 @Component({
     selector: 'app-airports-list',
