@@ -4,26 +4,7 @@
 
 -Use ng test to run the tests.
 
--Login only works with username: oscar and password: 123.
-
--If you want to see the login error behaviour:
-
-1. Open stubby.json
-2. Clear the whole POST to /login object.
-3. Paste the following and save:
-   {
-   "request": {
-   "method": "POST",
-   "url": "/login"
-   },
-   "response": {
-   "status": 401,
-   "body": {
-   "message": "Invalid credentials"
-   }
-   }
-   }
-4. Go to  http://localhost:4200/login and log in with any username and password.
+-Login only works with username: oscar and password: 123, any other combination throws an error.
 
 ## Configuration changes
 

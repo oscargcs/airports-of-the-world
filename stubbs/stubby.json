@@ -15,6 +15,18 @@
   },
   {
     "request": {
+      "method": "POST",
+      "url": "/login"
+    },
+    "response": {
+      "status": 401,
+      "body": {
+        "message": "Invalid credentials"
+      }
+    }
+  },
+  {
+    "request": {
       "url": "/allAirports",
       "method": "GET",
       "headers": {
