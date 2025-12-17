@@ -1,10 +1,10 @@
-<h1 class="heading-xl">List of airports</h1>
-<img src="../../../assets/airports-board.svg" alt="Image of airports board" class="mb-1"/>
+<h1 class="heading-lg">List of airports</h1>
+<img src="../../../assets/airports-board.svg" alt="" aria-hidden="true" width="700" height="200" class="mb-1"/>
 <p class="page-text">
     This page shows our list of airports. Click on them to know more about them.
 </p>
-<div class="airports-list">
+<div class="airports-list" role="list" aria-label="Airports list">
     @for (airport of airports(); track airport) {
-        <app-airport-card [airport]="airport"></app-airport-card>
+        <app-airport-card [airport]="airport" role="listitem"></app-airport-card>
     }
 </div>

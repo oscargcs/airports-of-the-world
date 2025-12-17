@@ -1,9 +1,9 @@
 @if (airport(); as airport) {
-    <h1 class="mb-1 heading-xl">{{ airport.name }}</h1>
-    <img class="airport-image" [src]="airport.image" [alt]="'Image of ' + airport.name"/>
+    <h1 class="mb-1 heading-lg">{{ airport.name }}</h1>
+    <img class="airport-image" [ngSrc]="airport.image" width="700" height="200" alt="" aria-hidden="true"/>
 
     <section class="card">
-        <h3 class="heading-md">General Information</h3>
+        <h2 class="heading-md">General Information</h2>
         <p>City: {{ airport.city }}</p>
         <p>Country: {{ airport.country }}</p>
         <p>Owner: {{ airport.owner }}</p>

@@ -25,14 +25,14 @@
   color: var(--color-white);
   gap: 8px;
   padding-right: 8px;
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
 }
 
 .logout {
   display: flex;
   align-items: center;
   color: var(--color-white);
-  font-size: var(--font-xs);
+  font-size: var(--font-sm);
   padding: 0 8px;
   margin-right: -22px;
 }

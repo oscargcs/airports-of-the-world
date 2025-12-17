@@ -1,12 +1,13 @@
-<nav class="side-menu">
+<nav class="side-menu" aria-label="Navigation menu">
     <ul>
         @for (item of menuItems(); track $index) {
             <li>
-                <a routerLinkActive="active"
+                <a tabindex="0"
+                   routerLinkActive="active"
                    [routerLinkActiveOptions]="{ exact: false }"
                    [routerLink]="item.link">
                     <span class="menu-text">{{ item.label }}</span>
-                    <span class="menu-icon">></span>
+                    <span class="menu-icon" aria-hidden="true">></span>
                 </a>
             </li>
         }

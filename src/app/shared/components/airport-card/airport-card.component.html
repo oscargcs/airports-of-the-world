@@ -1,4 +1,9 @@
-<mat-card class="cursor-pointer shadowless-gray-border" (click)="clickAirport(airport().key)">
+<mat-card class="cursor-pointer shadowless-gray-border" tabindex="0" role="button"
+          aria-label="airport-{{ airport().key }}-info"
+          (click)="clickAirport(airport().key)"
+          (keydown.enter)="clickAirport(airport().key)"
+          (keydown.space)="clickAirport(airport().key)"
+>
     <mat-card-header class="mb-1">
         <mat-card-title>{{ airport().name }}</mat-card-title>
         <mat-card-subtitle>{{ airport().key }}</mat-card-subtitle>

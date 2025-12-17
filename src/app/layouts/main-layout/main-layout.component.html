@@ -1,7 +1,7 @@
 <div class="app-layout">
     <app-navbar-component></app-navbar-component>
 
-    <main class="layout-grid">
+    <div class="layout-grid">
         <div class="page-layout">
             <aside>
                 <app-side-menu [menuItems]="menuItems()"></app-side-menu>
@@ -10,7 +10,7 @@
                 <router-outlet></router-outlet>
             </div>
         </div>
-    </main>
+    </div>
 
     <app-footer [textLinks]="textLinks()" [iconLinks]="iconLinks()"></app-footer>
 </div>

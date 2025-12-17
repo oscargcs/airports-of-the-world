@@ -1,16 +1,16 @@
 ## Usage
 
--Use npm run start:all to start to run the stubs and ng serve.
+-Use npm run start:all to start both the stub server and the Angular development server.
 
 -Use ng test to run the tests.
 
--Login only works with username: oscar and password: 123, any other combination throws an error.
+-Login only succeeds with username "oscar" and password "123". Any other combination throws an error.
 
 ## Configuration changes
 
 -Configuration files had to be changed in order to run tests.
 
--This project was migrated to Angular 20, please ensure your Node.js version is at least 20.11.1 (Windows command: node
+-This project was migrated to Angular 20. Please ensure your Node.js version is at least 20.11.1 (Windows command: node
 -v) and your TypeScript version is least 5.8 (Windows command: tsc -v).
 
 -Angular material was also upgraded to version 20.
@@ -27,15 +27,27 @@
 
 ## Accessibility
 
--Some aria-labels are already set by Angular Material.
+-aria-labels were used to describe items.
 
--aria-live was added for loading spinner.
+-aria-live combined with a span with a cdk-visually-hidden class was used to inform the user about
+updates (logging in, loading and errors).
+
+-Keyboard navigation was considered.
 
 ## Authentication
 
 -Local storage was used to preserve the login information in the browser, in case the page is refreshed.
 
 -The login state is handled using NgRx.
+
+## Images
+
+-NgOptimizedImage was used to improve the loading of images that are not SVG (airport-detail).
+
+-As images are visible in the viewport, even if they are decorative, no lazy loading was applied.
+
+-The backend links contained large images, so I modified to get smaller images. Using some modern format like WebP, AVIF
+or compressing the images would be a better solution from the backend side.
 
 ## Single airport component
 

@@ -1,26 +1,26 @@
-<div class="navbar">
+<nav class="navbar">
     <div class="navbar-content">
         <div class="logo-and-back-arrow-content">
-            <button mat-icon-button (click)="navigateBack()">
-                <img alt="Navigate back button" src="../../../assets/arrow-left.svg"/>
+            <button mat-icon-button tabindex="0" aria-label="Go back" (click)="navigateBack()">
+                <img src="../../../assets/arrow-left.svg" alt="" aria-hidden="true"/>
             </button>
-            <img alt="Vueling logo" class="vueling-logo" src="../../../assets/vueling-default.svg"/>
+            <img class="vueling-logo" src="../../../assets/vueling-default.svg" alt="" aria-hidden="true"/>
         </div>
 
         <div class="right">
-            <div class="user-info">
-                <img src="../../../assets/account-circle.svg" alt="User"/>
+            <div class="user-info" aria-label="Logged in user">
+                <img src="../../../assets/account-circle.svg" alt="" aria-hidden="true"/>
                 <span>{{ username() }}</span>
             </div>
 
-            <span class="vertical-divider"></span>
+            <span class="vertical-divider" aria-hidden="true"></span>
 
             <div class="logout">
                 <span>Logout</span>
-                <button mat-icon-button (click)="logout()">
-                    <img src="../../../assets/logout.svg" alt="Logout button"/>
+                <button mat-icon-button aria-label="Logout" (click)="logout()">
+                    <img src="../../../assets/logout.svg" alt="" aria-hidden="true"/>
                 </button>
             </div>
         </div>
     </div>
-</div>
+</nav>
