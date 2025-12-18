@@ -25,6 +25,8 @@
 
 -palette.scss and typography.scss contain global types of colours and fonts respectively.
 
+-Unused indigo-pink.scss was removed from angular.json.
+
 ## Accessibility
 
 -aria-labels were used to describe items.
@@ -48,6 +50,8 @@ updates (logging in, loading and errors).
 
 -The backend links contained large images, so I modified to get smaller images. Using some modern format like WebP, AVIF
 or compressing the images would be a better solution from the backend side.
+
+-width and height were added to all the images in order to avoid layout shifts.
 
 ## Single airport component
 
