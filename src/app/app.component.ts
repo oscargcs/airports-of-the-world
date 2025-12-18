@@ -4,8 +4,7 @@ import {RouterOutlet} from '@angular/router';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    imports: [RouterOutlet],
-    styleUrls: ['./app.component.scss']
+    imports: [RouterOutlet]
 })
 export class AppComponent {
     public title: string = 'AirportsOfTheWorld';

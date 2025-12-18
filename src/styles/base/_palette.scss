@@ -1,30 +1,17 @@
 $color-primary-a: #4D4D4D;
-$color-primary-b: #eae0c3;
+
+$gray-20: #DDD;
+$gray-45: #999;
 
 $color-white: #FFF;
-$gray-10: #F7F7F7;
-$gray-15: #F3F3F3;
-$gray-18: #E9E9E9;
-$gray-20: #DDD;
-$gray-30: #CCC;
-$gray-45: #999;
-$gray-60: #4D4D4D;
-$gray-75: #333;
 $color-black: #000;
 $color-red: #ff0000;
 
 :root {
   --color-primary-a: #{$color-primary-a};
-  --color-primary-b: #{$color-primary-b};
 
-  --color-gray-10: #{$gray-10};
-  --color-gray-15: #{$gray-15};
-  --color-gray-18: #{$gray-18};
   --color-gray-20: #{$gray-20};
-  --color-gray-30: #{$gray-30};
   --color-gray-45: #{$gray-45};
-  --color-gray-60: #{$gray-60};
-  --color-gray-75: #{$gray-75};
 
   --color-black: #{$color-black};
   --color-white: #{$color-white};

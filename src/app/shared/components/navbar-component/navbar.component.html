@@ -2,14 +2,15 @@
     <div class="navbar-content">
         <div class="logo-and-back-arrow-content">
             <button mat-icon-button tabindex="0" aria-label="Go back" (click)="navigateBack()">
-                <img src="../../../assets/arrow-left.svg" alt="" aria-hidden="true"/>
+                <img src="../../../assets/ui-icons/arrow-left.svg" alt="" aria-hidden="true"/>
             </button>
-            <img class="vueling-logo" src="../../../assets/vueling-default.svg" alt="" aria-hidden="true"/>
+            <img class="vueling-logo" src="../../../assets/social-media-icons/vueling-default.svg" alt=""
+                 aria-hidden="true"/>
         </div>
 
         <div class="right">
             <div class="user-info" aria-label="Logged in user">
-                <img src="../../../assets/account-circle.svg" alt="" aria-hidden="true"/>
+                <img src="../../../assets/ui-icons/account-circle.svg" alt="" aria-hidden="true"/>
                 <span>{{ username() }}</span>
             </div>
 
@@ -18,7 +19,7 @@
             <div class="logout">
                 <span>Logout</span>
                 <button mat-icon-button aria-label="Logout" (click)="logout()">
-                    <img src="../../../assets/logout.svg" alt="" aria-hidden="true"/>
+                    <img src="../../../assets/ui-icons/logout.svg" alt="" aria-hidden="true"/>
                 </button>
             </div>
         </div>

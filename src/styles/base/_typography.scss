@@ -2,13 +2,13 @@ $font-sm: 12px;
 $font-md: 16px;
 $font-lg: 24px;
 
+$font-weight-bold: 700;
+
 :root {
   --font-sm: #{$font-sm};
   --font-md: #{$font-md};
   --font-lg: #{$font-lg};
 
   --font-family-base: "Roboto", "Helvetica Neue", sans-serif;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
+  --font-weight-bold: #{$font-weight-bold};
 }

@@ -3,11 +3,8 @@ import {MatError} from '@angular/material/form-field';
 
 @Component({
     selector: 'app-error',
-    imports: [
-        MatError
-    ],
+    imports: [MatError],
     templateUrl: './error.component.html',
-    styleUrl: './error.component.scss'
 })
 export class ErrorComponent {
     public error: InputSignal<string> = input.required();

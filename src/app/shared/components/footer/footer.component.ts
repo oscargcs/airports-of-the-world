@@ -1,5 +1,5 @@
 import {Component, input} from '@angular/core';
-import {SocialLinkComponent} from '../../ui/clickable-icon/social-link.component';
+import {SocialLinkComponent} from '../../ui/social-link/social-link.component';
 import {SocialPlatformName} from '../../types/social-platform-name';
 import {ClickableTextLink} from '../../types/clicable-text-link';
 import {TextLinkComponent} from '../../ui/text-link/text-link.component';
