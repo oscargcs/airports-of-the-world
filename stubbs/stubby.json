@@ -41,85 +41,97 @@
   {
     "request": {
       "url": "/airport",
-      "method": "POST",
-      "post": "{\"key\":\"BCN\"}",
+      "method": "GET",
+      "query": {
+        "key": "BCN"
+      },
       "headers": {
-        "securityKey": "[\\s\\S]"
+        "securityKey": "[\\s\\S]+"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-bcn.json"
+      "file": "data/airport-bcn.json"
     }
   },
   {
     "request": {
       "url": "/airport",
-      "method": "POST",
-      "post": "{\"key\":\"MAD\"}",
+      "method": "GET",
+      "query": {
+        "key": "MAD"
+      },
       "headers": {
         "securityKey": "[\\s\\S]"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-mad.json"
+      "file": "data/airport-mad.json"
     }
   },
   {
     "request": {
       "url": "/airport",
-      "method": "POST",
-      "post": "{\"key\":\"CDG\"}",
+      "method": "GET",
+      "query": {
+        "key": "CDG"
+      },
       "headers": {
         "securityKey": "[\\s\\S]"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-cdg.json"
+      "file": "data/airport-cdg.json"
     }
   },
   {
     "request": {
       "url": "/airport",
-      "method": "POST",
-      "post": "{\"key\":\"FCO\"}",
+      "method": "GET",
+      "query": {
+        "key": "FCO"
+      },
       "headers": {
         "securityKey": "[\\s\\S]"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-fco.json"
+      "file": "data/airport-fco.json"
     }
   },
   {
     "request": {
       "url": "/airport",
-      "method": "POST",
-      "post": "{\"key\":\"LHR\"}",
+      "method": "GET",
+      "query": {
+        "key": "LHR"
+      },
       "headers": {
         "securityKey": "[\\s\\S]"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-lhr.json"
+      "file": "data/airport-lhr.json"
     }
   },
   {
     "request": {
       "url": "/airport",
-      "method": "POST",
-      "post": "{\"key\":\"LIS\"}",
+      "method": "GET",
+      "query": {
+        "key": "LIS"
+      },
       "headers": {
         "securityKey": "[\\s\\S]"
       }
     },
     "response": {
       "status": 200,
-      "file": "data/aiport-lis.json"
+      "file": "data/airport-lis.json"
     }
   }
 ]

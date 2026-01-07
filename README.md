@@ -1,49 +1,50 @@
-# AirportsOfTheWorld
+## Angular Airports App
 
-The application shows a list of international airports.
+This project is a small Angular application built as part of a technical assessment and later refined for portfolio purposes.
+It demonstrates authentication, state management, routing and accessibility.
 
-## Stubby configuration
+## Usage
 
-The information is consumed from a Stubby server (node server) within the application.
-The responses from the server are already configured.
-- You can see the configurations in: `./stubbs/stubby.json`
-- Las respuestas de las peticiones están en: `./stubbs/data/*`
-- Request responses are in: `./stubbs/data/*`
-- Requests to the server require a `securityKey` header (accepts any value)
+-Use "npm run start:all" to start both the stub server and the Angular development server.
 
+-Use "ng test" to run the tests.
 
-## The objective of the test
+-Login only succeeds with username "oscar" and password "123". Any other combination throws an error.
 
-### Configurations
+## General considerations
 
-- Updating this project to last Angular version will be evaluated.
-- Create a script in the package.json that when executed will raise both the stubs and the serve.
+-Angular signals were used in the application for reactive state management.
 
-### Applicatión
-- Refactor the application
-- Refactor the `airports-list-component` component so that all elements are reusable
-- Create a screen with the airport detail
-- Control navigation between screens
-- Implement unit test in some component and some service
-- Create a login (screen) to create the security Key and manage the session in the application:
-  - Show the username in the header
-  - LogOut
-  - Access control to the page if it is logged
-  - Add `securityKey` to requests to get access
-- Control the state of the application via REDUX
+## SCSS structure
 
-### Styles
+-"styles.scss" contains global styles.
 
-- It is required to display the page as shown in Figma
-  - https://www.figma.com/file/VDBOZy7QH7QJ3DrJTQqreQ/Frontend?type=design&node-id=0%3A1&mode=design&t=fRTdVhNihjBhTUgv-1
-  - Password: FrontTest23
-- The optimization of the HTML and CSS code and the use of techniques to lighten it will be valued
-- The encapsulation system and accessibility will be considered
-- Design the other pages based on the figma design
+-"palette.scss" and "typography.scss" contain global types of colours and fonts respectively.
 
-*It will be valued that the application is accessible <br>
-*Any additional point to those required will be valued very positively
+## Accessibility
 
-**Crea un README2.md comentado las tareas realizadas**
-<br><br>
- **Por favor, una vez finalizada la prueba simplemente debemos crear una petición de incorporación (Pull Request) hacía la rama de master del repositorio, y el último commit contenga en al descripción "Finished". Con esto podemos saber que la prueba ha sido finalizada.**
+-"aria-labels" were used to describe items.
+
+-"aria-live" combined with a span with a "cdk-visually-hidden" class was used to inform the user about
+updates (logging in, loading and errors).
+
+-Keyboard navigation was considered.
+
+## Authentication
+
+-Local storage was used to preserve the login information in the browser, in case the page is refreshed.
+
+-The login state is handled using NgRx.
+
+## Images
+
+-NgOptimizedImage was used to improve the loading of images that are not SVG (airport-detail).
+
+-As images are visible in the viewport, even if they are decorative, no lazy loading was applied.
+
+-"width" and "height" were added to all the images in order to avoid layout shifts.
+
+## Single airport component
+
+-Direct navigation is supported: if a user manually changes or shares the URL,
+the airport detail page will still load correctly.

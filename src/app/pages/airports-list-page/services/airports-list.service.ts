@@ -1,5 +1,5 @@
 import {inject, Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Airport, ExtendedAirport} from '../../../shared/types/airport';
 import {Observable} from 'rxjs';
 import {environment} from '../../../../environments/environment';
@@ -15,7 +15,8 @@ export class AirportsListService {
     }
 
     public getAirport(airportKey: string): Observable<ExtendedAirport | undefined> {
-        return this.http.post<ExtendedAirport>(`${this.API_URL}/airport`, {key: airportKey});
+        const params: HttpParams = new HttpParams().set('key', airportKey);
+        return this.http.get<ExtendedAirport>(`${this.API_URL}/airport`, {params});
     }
 
 }
