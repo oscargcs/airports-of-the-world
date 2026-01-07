@@ -1,8 +1,8 @@
 ## Usage
 
--Use npm run start:all to start both the stub server and the Angular development server.
+-Use "npm run start:all" to start both the stub server and the Angular development server.
 
--Use ng test to run the tests.
+-Use "ng test" to run the tests.
 
 -Login only succeeds with username "oscar" and password "123". Any other combination throws an error.
 
@@ -17,21 +17,21 @@
 
 ## General considerations
 
--Signals were used in the application for reactive state management.
+-Angular signals were used in the application for reactive state management.
 
 ## SCSS structure
 
--styles.scss contains global styles.
+-"styles.scss" contains global styles.
 
--palette.scss and typography.scss contain global types of colours and fonts respectively.
+-"palette.scss" and "typography.scss" contain global types of colours and fonts respectively.
 
--Unused indigo-pink.scss was removed from angular.json.
+-Unused "indigo-pink.scss" was removed from "angular.json".
 
 ## Accessibility
 
--aria-labels were used to describe items.
+-"aria-labels" were used to describe items.
 
--aria-live combined with a span with a cdk-visually-hidden class was used to inform the user about
+-"aria-live" combined with a span with a "cdk-visually-hidden" class was used to inform the user about
 updates (logging in, loading and errors).
 
 -Keyboard navigation was considered.
@@ -51,8 +51,9 @@ updates (logging in, loading and errors).
 -The backend links contained large images, so I modified to get smaller images. Using some modern format like WebP, AVIF
 or compressing the images would be a better solution from the backend side.
 
--width and height were added to all the images in order to avoid layout shifts.
+-"width" and "height" were added to all the images in order to avoid layout shifts.
 
 ## Single airport component
 
--If someone changes or shares the link manually they can also see the airport information.
+-Direct navigation is supported: if a user manually changes or shares the URL,
+the airport detail page will still load correctly.
