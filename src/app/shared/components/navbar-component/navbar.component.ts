@@ -6,7 +6,6 @@ import {logout} from '../../../authentication/store/auth.actions';
 import {selectUser} from '../../../authentication/store/auth.selectors';
 import {User} from '../../../authentication/types/user';
 import {toSignal} from '@angular/core/rxjs-interop';
-import {first} from 'rxjs';
 
 @Component({
     selector: 'app-navbar-component',
@@ -19,7 +18,7 @@ export class NavbarComponent {
     private store = inject(Store);
 
     private user: Signal<User | null> = toSignal(
-        this.store.select(selectUser).pipe(first()),
+        this.store.select(selectUser),
         {initialValue: null}
     );
 

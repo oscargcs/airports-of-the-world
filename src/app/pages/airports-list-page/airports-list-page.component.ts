@@ -5,7 +5,6 @@ import {HttpErrorResponse} from '@angular/common/http';
 import {AirportsListComponent} from '../airports-list/airports-list.component';
 import {ErrorComponent} from '../../shared/components/error/error.component';
 import {LoadingComponent} from '../../shared/components/loading/loading.component';
-import {first} from 'rxjs';
 
 @Component({
     selector: 'app-airports-list-page',
@@ -24,7 +23,7 @@ export default class AirportsListPageComponent implements OnInit {
     private airportsListService = inject(AirportsListService);
 
     public ngOnInit(): void {
-        this.airportsListService.getAllAirports().pipe(first()).subscribe({
+        this.airportsListService.getAllAirports().subscribe({
             next: (res: Airport[] | undefined) => {
                 this.airportsList.set(res);
             },
