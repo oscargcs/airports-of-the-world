@@ -5,13 +5,15 @@
   height: 64px;
 }
 
-.logo-and-back-arrow-content {
-  margin-left: -16px;
-}
-
-.right {
+.icon-button {
   display: flex;
   align-items: center;
+
+  padding: 0;
+  border: none;
+  background: none;
+
+  cursor: pointer;
 }
 
 .user-info {
@@ -28,9 +30,11 @@
   align-items: center;
   color: var(--color-white);
   font-size: var(--font-sm);
-  padding: 0 8px;
-  margin-right: -22px;
+  padding: 0 0 0 8px;
 }
 
+.pr-8 {
+  padding-right: 8px;
+}
 
 

@@ -7,6 +7,17 @@ html, body {
   font-family: var(--font-family-base);
 }
 
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
 h1.heading-lg {
   font-size: var(--font-lg);
   font-weight: var(--font-weight-bold);

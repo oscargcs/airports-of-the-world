@@ -1,6 +1,6 @@
 <div class="footer">
     <div class="navbar-content">
-        <div class="left">
+        <div class="align-items-center">
             @for (link of textLinks(); track link.href) {
                 <app-text-link [href]="link.href" [label]="link.label"></app-text-link>
                 @if (!$last) {
