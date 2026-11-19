@@ -5,7 +5,7 @@ It demonstrates authentication, state management, routing and accessibility.
 
 ## Requirements
 
--Node.js 20 up to 23. Please note that the stubs will not work with Node.js 24 and potentially other versions.
+-Node.js 20 or higher. 
 -npm
 
 ## Usage
