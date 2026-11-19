@@ -3,6 +3,11 @@
 This project is a small Angular application built as part of a technical assessment and later refined for portfolio purposes.
 It demonstrates authentication, state management, routing and accessibility.
 
+## Requirements
+
+-Node.js 20 up to 23. Please note that the stubs will not work with Node.js 24 and potentially other versions.
+-npm
+
 ## Usage
 
 -Use "npm run start:all" to start both the stub server and the Angular development server.
