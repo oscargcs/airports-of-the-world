@@ -1,4 +1,12 @@
-@if (airport(); as airport) {
+@if (airportStatus() === 'loading') {
+    <div class="loading">
+        <app-loading></app-loading>
+    </div>
+} @else if (airportStatus() === 'error') {
+    <div class="align-items-center justify-content-center">
+        <app-airport-not-found-component></app-airport-not-found-component>
+    </div>
+} @else if (airport(); as airport) {
     <h1 class="mb-1 heading-lg">{{ airport.name }}</h1>
     <img class="airport-image" [ngSrc]="airport.image" width="700" height="200" alt="" aria-hidden="true"/>
 
@@ -9,10 +17,4 @@
         <p>Owner: {{ airport.owner }}</p>
         <p>Built: {{ airport.build }}</p>
     </section>
-}
-
-@if (!airport()) {
-    <div class="loading">
-        <app-loading></app-loading>
-    </div>
 }

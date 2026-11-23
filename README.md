@@ -53,3 +53,5 @@ updates (logging in, loading and errors).
 
 -Direct navigation is supported: if a user manually changes or shares the URL,
 the airport detail page will still load correctly.
+
+-Incorrect airport keys are handled by showing an "airport not found" message.

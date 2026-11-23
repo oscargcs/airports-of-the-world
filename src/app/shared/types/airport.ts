@@ -14,3 +14,5 @@ export interface ExtendedAirport {
     build: string;
     image: string;
 }
+
+export type AirportStatus = 'loading' | 'success' | 'error';
